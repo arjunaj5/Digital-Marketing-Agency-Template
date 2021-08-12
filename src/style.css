@@ -1,0 +1,70 @@
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+/* Your Screen Resolution is */
+/* 1366x768 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #FF3147;
+    --secondary-color: #000000;
+    --primary-text-color: #FFFFFF;
+
+    --primary-font: normal normal 600 1.4rem Cormorant SC,sans-serif;
+    --header-font: normal normal bold 2.7rem Cormorant SC,sans-serif;
+    --paragraph-font: normal normal normal 1rem Poppins,sans-serif;
+    --button-font: normal normal 600 14px Poppins;
+
+}
+/* -----------GENERAL STYLES----------- */
+* + *{
+    margin-bottom: 1em !important;
+}
+div,body{
+    margin-bottom: 0 !important;
+}
+h1,h2,h3,h4,h5{
+    text-transform: uppercase;
+    
+}
+h1{
+    color: var(--secondary-color);
+    font: var(--header-font)
+}
+
+h5{
+    color: var(--primary-color);
+    font: var(--primary-font)
+}
+p{
+    font: var(--paragraph-font)
+}
+button.btn{
+    font: var(--button-font);
+    border-radius: 3px;
+}
+
+main{
+    margin-left: 19.5%;
+    max-width: 100vw;
+}
+section{
+  padding: 100px 0;
+ 
+}
+
+/*------------------------- HOME SECTION ------------------------*/
+
+.home {
+    gap:2rem;
+
+}
+
+.home .hero .contact-us-btn{
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
