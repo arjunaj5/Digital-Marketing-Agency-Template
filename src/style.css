@@ -12,33 +12,44 @@
 :root{
     --primary-color: #FF3147;
     --secondary-color: #000000;
-    --primary-text-color: #FFFFFF;
+    --text-color: #FFFFFF;
 
-    --primary-font: normal normal 600 1.4rem Cormorant SC,sans-serif;
-    --header-font: normal normal bold 2.7rem Cormorant SC,sans-serif;
+    --primary-heading-font: normal normal 600 30px Cormorant SC,sans-serif;
+    --heading-font: normal normal bold 60px Cormorant SC,sans-serif;
     --paragraph-font: normal normal normal 1rem Poppins,sans-serif;
     --button-font: normal normal 600 14px Poppins;
 
+    
+    --primary-sub-heading-font:normal normal 600 24px Cormorant SC;
+    --sub-heading-font:normal normal bold 45px Cormorant SC;
 }
 /* -----------GENERAL STYLES----------- */
 * + *{
-    margin-bottom: 1em !important;
+    margin-top: 1.5rem !important;
 }
-div,body{
-    margin-bottom: 0 !important;
+div,body,section,label{
+    margin-top: 0 !important;
 }
 h1,h2,h3,h4,h5{
-    text-transform: uppercase;
-    
+    text-transform: uppercase; 
+}
+h1,h2{
+    color: var(--secondary-color)
+}
+h4,h5{
+    color: var(--primary-color);
 }
 h1{
-    color: var(--secondary-color);
-    font: var(--header-font)
+    font: var(--heading-font)
 }
-
+h2{
+    font: var(--sub-heading-font)  
+}
+h4{
+    font: var(--primary-heading-font);
+}
 h5{
-    color: var(--primary-color);
-    font: var(--primary-font)
+    font: var(--primary-sub-heading-font)
 }
 p{
     font: var(--paragraph-font)
@@ -46,6 +57,12 @@ p{
 button.btn{
     font: var(--button-font);
     border-radius: 3px;
+    background-color: var(--primary-color) !important;
+    color: var(--text-color) !important;
+}
+button.btn:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 main{
@@ -54,6 +71,7 @@ main{
 }
 section{
   padding: 100px 0;
+ 
  
 }
 
@@ -64,7 +82,77 @@ section{
 
 }
 
-.home .hero .contact-us-btn{
-    background-color: var(--primary-color);
-    color: var(--primary-text-color);
+
+
+/*-------------- WHAT WE DO SECTION START------------- */
+
+.what-we-do .header,.para{
+    width: min(100%,  clamp(400px,40%,700px));
+}
+ /* CAROUSEL */
+
+ .carousel-indicators{
+     position: relative;
+     justify-content: start;
+ }
+ .carousel-indicators [data-mdb-target]{
+     margin-top: 0!important;
+     border-radius: 50%;
+     width: 10px;
+     height: 10px;
+     background-color: black;
+     border: 10px solid rgb(255, 255, 255);
+     opacity: 1;
+ }
+ .carousel-indicators .active{
+     box-shadow: 0 0 0 1px var(--primary-color);
+ }
+ .carousel-item .row .web-development{
+ background-color: var(--primary-color);
+ height: max(30vw,80vh);
+ padding: 5rem 3rem;
+ text-align: center;
+ opacity: .5;
+ transition: opacity .5s ease;
+ }
+ .carousel-item .row .web-development:hover{
+    opacity: 1;
+ }
+ .carousel-item .row>div>img{
+    height: max(30vw,80vh);
+ }
+ .carousel-item .row .web-development>.white {
+     color: var(--text-color);
+
+ }
+ .web-development .icon{
+     width: clamp(3rem,60px,70px);
+     margin: 0 auto;
+ }
+ .web-development button.btn{
+     color: var(--primary-color) !important;
+     background-color: var(--text-color) !important;
+     text-align: left;
+     width: max(5rem, 80%);
+     margin: 0 auto;
+     display: flex;
+     gap: 1em;
+     align-items: center;
+ }
+
+ .carousel-item .row>div:hover>img{
+    display: none !important;
+
+ }
+
+/*-------------- WHAT WE DO SECTION END------------- */
+
+
+/*--------------- MODAL WINDOW----------- */
+.form-check-input[type=checkbox]{
+    border-color: var(--primary-color)!important;
+}
+.form-check-input[type=checkbox]:checked{
+    background-color: var(--primary-color)!important;
+    
 }

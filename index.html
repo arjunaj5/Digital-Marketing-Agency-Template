@@ -18,20 +18,154 @@
     <main>
         <section class="home d-flex flex-column flex-lg-row">
             <div class="hero">
-                <h5 class="sub-heading">award winning</h5>
+                <h4 class="sub-heading">award winning</h4>
                 <h1 class="main-heading">digital marketing agency</h1>
                 <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit
                     fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum</p>
-                <button type="button" class="btn btn-light contact-us-btn" data-mdb-ripple-color="dark">CONTACT
+                <button type="button" class="btn btn-light contact-us-btn" data-mdb-ripple-color="light"
+                    data-mdb-toggle="modal" data-mdb-target="#exampleModal">CONTACT
                     US</button>
             </div>
             <div class="hero-image mx-0 px-0">
-                <img src="./src/images/hero.png" alt="hero-thumb" class="img-fluid">
+                <img src="./src/images/hero.png" alt="hero-thumb" class="img-fluid ">
+            </div>
+
+        </section>
+        <section class="what-we-do ">
+
+            <div class="top d-flex flex-column flex-lg-row justify-content-start">
+                <header class="header">
+                    <h5>what we do</h5>
+                    <h2 class="header">services provided for you</h2>
+                </header>
+                <p class="para pt-5">
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit
+                    fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum
+                </p>
+            </div>
+
+            <!----- CAROUSEL ------>
+            <div id="carouselExampleIndicators" class="carousel slide" data-mdb-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/1.png" class="d-block w-100" alt="..." />
+
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/2.png" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/3.png" class="d-block w-100" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/3.png" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/1.png" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/2.png" class="d-block w-100" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/2.png" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/3.png" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+                                <img src="./src/images/1.png" class="d-block w-100" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="carousel-indicators mt-4 mx-0">
+                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
             </div>
         </section>
+
+        <!-- OUR PROJECT SECTION -->
+        <section class="our-project">
+            <h5>our project</h5>
+            <h2>why we are best</h2>
+        </section>
+
     </main>
 </body>
-<!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
 
 </html>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container-fluid">
+        <div class="modal-content">
+            <form action="https://getform.io/f/d505f6ab-2e5f-4892-bd59-6c85d7cc7a93" method="POST" class="row g-3 "
+                novalidate onsubmit="handleSubmit(event)">
+                <div class="modal-body p-4">
+                    <h6 class="title p-2">Talk to us</h6>
+
+                    <div class="form-outline my-4">
+
+                        <input type="email" id="work-email" class="form-control" name="work-email" required />
+                        <hr class="my-0 mx-2">
+                        <label class="text-muted form-label" for="email" value="">Work email*</label>
+                    </div>
+
+                    <div class=" d-flex justify-content-between">
+                        <div class="form-outline my-4 d-inline-block ">
+                            <input type="text" id="first-name" class="form-control" name='first-name' required />
+                            <hr class="my-0 mx-2">
+                            <label class="text-muted form-label" for="first-name">First name*</label>
+                        </div>
+                        <div class="form-outline my-4 d-inline-block ">
+                            <input type="text" id="last-name" class="form-control " name='last-name' required />
+                            <hr class="my-0 mx-2">
+                            <label class="text-muted form-label" for="last-name">Last name*</label>
+                        </div>
+                    </div>
+                    <div class="form-check my-4">
+                        <input class="form-check-input " style="margin-right: 0;" type="checkbox" id="agreement" />
+
+                        <label class="text-muted form-check-label mx-2" for="agreement" required>I agree to Fyle's terms
+                            and
+                            conditions, and
+                            provide
+                            consent to send me communication.</label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary d-block w-100">
+                        Contact Us
+                    </button>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+</div>
+<!-- MDB -->
+<script src='./src/script.js' type="text/javascript"> </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
