@@ -1,22 +1,48 @@
 
 function handleSubmit(e) {
-    console.log(e)
-    e.preventDefault();
+
+    if (!e.target.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    e.target.classList.add('was-validated')
 
 
 }
+const siteUrl = 'https://www.fylehq.com/'
+function openUrl() {
+    window.open(siteUrl, '_blank');
+}
+
+
+function ourProjectClick(e) {
+    img = document.querySelector('.our-project-container img.preview')
+    console.dir(img)
+    img.src = "./src/images/our-project/" + e.currentTarget.id
+
+    e.currentTarget.parentElement.querySelector('.primary').classList.remove('primary')
+    e.currentTarget.classList.add('primary')
+
+}
+function modalInputChange(e) {
+    console.dir(e.target)
+    let label = e.target.parentElement.querySelector('label')
+    if (e.target.value !== "") {
+        label.innerHTML = label.innerHTML.slice(0, -1)
+    }
+}
+
 carouselItems = document.querySelectorAll('.carousel-item .row div')
-console.log(carouselItems)
 let child = document.createElement('div');
 child.innerHTML = `
 <div class="web-development card ">
 
-<img class="icon" src="./src/icons/icon.svg" alt="">
+<img class="icon" src="./src/icons/developer/icon.svg" alt="">
 
 
 <h5 class="white">web development</h5>
 <p class="white">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
-<button type="button" class="btn btn-light" data-mdb-ripple-color="dark">read
+<button type="button" class="btn btn-light" data-mdb-ripple-color="dark" onclick="openUrl()">read
     more
     <svg xmlns="http://www.w3.org/2000/svg" width="37" height="10"
         viewBox="0 0 37 10">
@@ -50,4 +76,4 @@ carouselItems.forEach((item) => {
 
 })
 
-// 
+
