@@ -221,6 +221,7 @@ min-height: 100vh;
     background-color:#fff;
     min-width: 23%;
     border-radius: 2px;
+    transition: box-shadow .5s;
 }
 
 .our-growth .growth-card:hover{
