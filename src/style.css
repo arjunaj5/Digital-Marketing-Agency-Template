@@ -132,12 +132,10 @@ min-height: 100vh;
  .carousel-item .row>div>img{
     height: max(30vw,80vh);
  }
- @media screen and (max-width:900px){
-    .carousel-item .row .web-development,.carousel-item .row>div>img{
-            height: 300px;
-           
-            
-         }
+ @media screen and (max-width:800px){
+    .carousel-item .hide{
+    display: none !important;
+    }
  }
  .carousel-item .row .web-development>.white {
      color: var(--text-color);
