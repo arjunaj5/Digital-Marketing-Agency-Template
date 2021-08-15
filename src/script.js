@@ -30,6 +30,10 @@ function modalInputChange(e) {
     if (e.target.value !== "") {
         label.innerHTML = label.innerHTML.slice(0, -1)
     }
+
+    else {
+        label.innerHTML += '*'
+    }
 }
 
 carouselItems = document.querySelectorAll('.carousel-item .row div')
